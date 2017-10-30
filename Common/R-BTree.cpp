@@ -279,7 +279,7 @@ void DelectMaintain(R_BTree node)
 	}
 }
 
-void main()
-{
-	
-}
+//void main()
+//{
+//	
+//}

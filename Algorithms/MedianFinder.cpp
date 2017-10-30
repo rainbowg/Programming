@@ -88,24 +88,24 @@ private:
 };
 
 
-void main()
-{
-	int i;
-	MedianFinder *obj = new MedianFinder();
-	obj->addNum(1);
-	obj->addNum(2);
-	cout << obj->findMedian() << endl;
-	obj->addNum(3);
-	cout << obj->findMedian() << endl;
-	obj->addNum(4);
-	cout << obj->findMedian() << endl;
-
-	obj->addNum(5);
-	cout << obj->findMedian() << endl;
-	obj->addNum(6);
-	cout << obj->findMedian() << endl;
-	cin >> i;
-}
+//void main()
+//{
+//	int i;
+//	MedianFinder *obj = new MedianFinder();
+//	obj->addNum(1);
+//	obj->addNum(2);
+//	cout << obj->findMedian() << endl;
+//	obj->addNum(3);
+//	cout << obj->findMedian() << endl;
+//	obj->addNum(4);
+//	cout << obj->findMedian() << endl;
+//
+//	obj->addNum(5);
+//	cout << obj->findMedian() << endl;
+//	obj->addNum(6);
+//	cout << obj->findMedian() << endl;
+//	cin >> i;
+//}
 /**
 * Your MedianFinder object will be instantiated and called as such:
 * MedianFinder obj = new MedianFinder();

@@ -4,8 +4,8 @@
 
 using namespace std;
 
-void main()
-{
-	cout << abs(('a'-'z') % CircleNum) << endl;
-	system("pause");
-}
+//void main()
+//{
+//	cout << abs(('a'-'z') % CircleNum) << endl;
+//	system("pause");
+//}
