@@ -21,6 +21,11 @@ next数组可以理解为，通过“最长相同前后缀长度值右移一位，然后初始值赋为-1”
 利用next数组跳到1的位置（也是字符“B”），必然失配。
 
 
+KMP算法时间分析：
+我们发现如果某个字符匹配成功，模式串首字符的位置保持不动，如果匹配失败，模式串会跳到next[j]和字符。整个算法最坏的
+的情况是，当模式串首个字符位于n-m的位置才匹配成功，算法结束。
+所以，如果文本串长度为n，模式串长度为m，那么匹配过程时间复杂度为O(n)，算上计算next数组的时间O(m)，KMP整体为O(n+m)
+
 */
 
 #include <iostream>
@@ -77,25 +82,25 @@ int KMPSearch(char* temp, char* array, int* next)
 	return pos;
 }
 
-int main()
-{
-	char temp[] = "ABCDABCE"; 
-	char array[] = "BBC ABCEABCDABD ABCDABCEAB";
-	int next[8] = { 0 };
-	int i;
-	GetNext(temp, next);
-	if (-1 < 8)
-		cout << "true" << endl;
-	for (int i = 0; i < strlen(temp); i++)
-	{
-		cout << next[i] << " ";
-	}
-
-	cout << endl << "find pos:　" << KMPSearch(temp, array, next);
-
-	cin >> i;
-	/*system("pause");*/
-}
+//int main()
+//{
+//	char temp[] = "ABCDABCE"; 
+//	char array[] = "BBC ABCEABCDABD ABCDABCEAB";
+//	int next[8] = { 0 };
+//	int i;
+//	GetNext(temp, next);
+//	if (-1 < 8)
+//		cout << "true" << endl;
+//	for (int i = 0; i < strlen(temp); i++)
+//	{
+//		cout << next[i] << " ";
+//	}
+//
+//	cout << endl << "find pos:　" << KMPSearch(temp, array, next);
+//
+//	cin >> i;
+//	/*system("pause");*/
+//}
 
 
 
